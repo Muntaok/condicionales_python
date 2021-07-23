@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -30,3 +30,22 @@ contenido. Recomendamos pensar bien este problema de lógica con un lápiz y pap
 
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+
+temperatura_1 = float(input("Ingrese el primer numero:\n"))
+temperatura_2 = float(input("Ingrese el segundo numero:\n"))
+temperatura_3 = float(input("Ingrese el tercer numero:\n"))
+
+if (temperatura_1 > temperatura_2 and temperatura_1 > temperatura_3):
+    print("temperatura_1 =", temperatura_1, "es la maxima")
+elif (temperatura_2 > temperatura_1 and temperatura_2 > temperatura_3):
+    print("temperatura_2 =", temperatura_2, "es la maxima")
+else:
+    print("temperatura_3 =", temperatura_3, "es la maxima")
+
+
+if (temperatura_1 < temperatura_2 and temperatura_1 < temperatura_3):
+    print("temperatura_1 =", temperatura_1, "es la minima")
+elif (temperatura_2 < temperatura_1 and temperatura_2 < temperatura_3):
+    print("temperatura_2 =", temperatura_2, "es la minima")
+else:
+    print("temperatura_3 =", temperatura_3, "es la minima")
