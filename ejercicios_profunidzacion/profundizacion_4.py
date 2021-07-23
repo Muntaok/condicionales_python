@@ -4,7 +4,7 @@
 # Autor: Inove Coding School
 # Version: 2.0
 
-# NOTA: 
+# NOTA:
 # Estos ejercicios son de mayor dificultad que los de clase y práctica.
 # Están pensados para aquellos con conocimientos previo o que dispongan
 # de mucho más tiempo para abordar estos temas por su cuenta.
@@ -33,3 +33,40 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+
+palabra_1 = str(input("Ingrese la primer palabra:\n"))
+palabra_2 = str(input("Ingrese la segunda palabra:\n"))
+palabra_3 = str(input("Ingrese la tercer palabra:\n"))
+
+orden_usuario = int(
+    input("Elija el modo de orden entre 1(alfabeticamente) y 2(cantidad de letras)"))
+
+if orden_usuario == 1:
+    if (palabra_1 > palabra_2 and palabra_1 > palabra_3 and palabra_2 > palabra_3):
+        print("{}, {}, {}".format(palabra_1, palabra_2, palabra_3))
+    elif (palabra_1 > palabra_2 and palabra_1 > palabra_3 and palabra_3 > palabra_2):
+        print("{}, {}, {}".format(palabra_1, palabra_3, palabra_2))
+    elif (palabra_2 > palabra_1 and palabra_2 > palabra_3 and palabra_1 > palabra_3):
+        print("{}, {}, {}".format(palabra_2, palabra_1, palabra_3))
+    elif (palabra_2 > palabra_1 and palabra_2 > palabra_3 and palabra_3 > palabra_1):
+        print("{}, {}, {}".format(palabra_2, palabra_3, palabra_1))
+    elif (palabra_3 > palabra_1 and palabra_3 > palabra_2 and palabra_1 > palabra_2):
+        print("{}, {}, {}".format(palabra_3, palabra_1, palabra_2))
+    else:
+        print("{}, {}, {}".format(palabra_3, palabra_2, palabra_1))
+
+elif orden_usuario == 2:
+    if (len(palabra_1) > len(palabra_2) and len(palabra_1) > len(palabra_3) and len(palabra_2) > len(palabra_3)):
+        print("{}, {}, {}".format(palabra_1, palabra_2, palabra_3))
+    elif (len(palabra_1) > len(palabra_2) and len(palabra_1) > len(palabra_3) and len(palabra_3) > len(palabra_2)):
+        print("{}, {}, {}".format(palabra_1, palabra_3, palabra_2))
+    elif (len(palabra_2) > len(palabra_1) and len(palabra_2) > len(palabra_3) and len(palabra_1) > len(palabra_3)):
+        print("{}, {}, {}".format(palabra_2, palabra_1, palabra_3))
+    elif (len(palabra_2) > len(palabra_1) and len(palabra_2) > len(palabra_3) and len(palabra_3) > len(palabra_1)):
+        print("{}, {}, {}".format(palabra_2, palabra_3, palabra_1))
+    elif (len(palabra_3) > len(palabra_1) and len(palabra_3) > len(palabra_2) and len(palabra_1) > len(palabra_2)):
+        print("{}, {}, {}".format(palabra_3, palabra_1, palabra_2))
+    else:
+        print("{}, {}, {}".format(palabra_3, palabra_2, palabra_1))
+else:
+    print("Ingreso numero incorrecto")
